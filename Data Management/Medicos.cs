@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Objects;
 
 ///<copyright file = "Medicos.cs"	company = "IPCA">
 ///Copyright IPCA </copyright>
@@ -10,15 +11,15 @@ using System.Threading.Tasks;
 ///<version>0.1</version>
 ///<author>Andre</author>
 
-namespace TP1LP2
+namespace DataManagement
 {
-    class Medicos : Pessoa
+    class Medicos
     {
         /// <summary>
         /// Gets doctors that aren't busy
         /// </summary>
         /// <returns></returns>
-        int getAvaliableDoctors()
+        public int getAvaliableDoctors()
         {
             int avaliableDoctors = 3;
             return avaliableDoctors;

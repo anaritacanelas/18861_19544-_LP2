@@ -10,19 +10,20 @@ using System.Threading.Tasks;
 ///<version>0.1</version>
 ///<author>Andre</author>
 
-namespace TP1LP2
+namespace Objects
 {
     public class Pessoa
     {
-        
+
         #region Class state
         /// <summary>
         /// Initializing attributes of Pessoa
         /// </summary>
-        protected int age = 0;
-        protected int nif = 0;
-        protected string name;
-        protected string gender;
+        public DateTime birthDate;
+        public int nhsNumber = 0;
+        public string name;
+        public string gender;
+        public string address;
         #endregion
 
 
@@ -42,21 +43,23 @@ namespace TP1LP2
         /// </summary>
         /// <param name="n"></param>
         /// <param name="a"></param>
-        /// <param name="ni"></param>
+        /// <param name="nn"></param>
         /// <param name="gen"></param>
-        public Pessoa(string n, int a, int ni, string gen)
+        /// <param name="addr"></param>
+        public Pessoa(string n, DateTime a, int nn, string gen, string addr)
         {
             name = n;
-            age = a;
-            nif = ni;
+            birthDate = a;
+            nhsNumber = nn;
             gender = gen;
+            address = addr;
         }
         #endregion
 
         #region Methods
         #region Properties
         /// <summary>
-        /// Property to manipulate name of Utente
+        /// Property to manipulate name of person
         /// </summary>
         /// <returns></returns>
         public string Name
@@ -66,17 +69,17 @@ namespace TP1LP2
         }
 
         /// <summary>
-        /// Property to manipulate age of Utente
+        /// Property to manipulate age of person
         /// </summary>
         /// <returns></returns>
-        public int Age
+        public DateTime BirthDate
         {
-            get { return age; }
-            set { age = value; }
+            get { return birthDate; }
+            set { birthDate = value; }
         }
 
         /// <summary>
-        /// Property to manipulate gender of Utente
+        /// Property to manipulate gender of person
         /// </summary>
         /// <returns></returns>
         public string Gender
@@ -86,13 +89,22 @@ namespace TP1LP2
         }
 
         /// <summary>
-        /// Property to manipulate age of Utente
+        /// Property to manipulate national health system number of person
         /// </summary>
         /// <returns></returns>
-        public int Nif
+        public int NhsNumber
         {
-            get { return nif; }
-            set { nif = value; }
+            get { return nhsNumber; }
+            set { nhsNumber = value; }
+        }
+
+        /// <summary>
+        /// Property to manipulate address of person
+        /// </summary>
+        public string Adress
+        {
+            get { return address; }
+            set { address = value; }
         }
         #endregion
         #endregion

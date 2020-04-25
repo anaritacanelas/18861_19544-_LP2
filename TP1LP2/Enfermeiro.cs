@@ -10,15 +10,16 @@ using System.Threading.Tasks;
 ///<version>0.1</version>
 ///<author>Andre</author>
 
-namespace TP1LP2
+namespace Objects
 {
     /// <summary>
     /// Nurse class
     /// </summary>
-    class Enfermeiro : ProfissionalDeSaude
+    class Enfermeiro : Pessoa
     {
         #region Class stats
-
+        public int nurseCode;
+        public string specialty;        
         #endregion
 
         #region Behaviour
@@ -31,8 +32,45 @@ namespace TP1LP2
         {
 
         }
+
+        /// <summary>
+        /// Builder for enfermeiro
+        /// </summary>
+        /// <param name="nc"></param>
+        /// <param name="spec"></param>
+        public Enfermeiro(int nc, string spec)
+        {
+            nurseCode = nc;
+            specialty = spec;
+        }
+
         #endregion
 
+        #region Methods
+
+
+        #region Properties
+
+        /// <summary>
+        /// Getting nurse code for enfermeiro
+        /// </summary>
+        public int NurseCode
+        {
+            get { return nurseCode; }
+            set { nurseCode = value;}
+        }
+
+        /// <summary>
+        /// Getting nurse code for enfermeiro
+        /// </summary>
+        public string Specialty
+        {
+            get { return specialty; }
+            set { specialty = value; }
+        }
+
+        #endregion
+        #endregion
         #endregion
     }
 }

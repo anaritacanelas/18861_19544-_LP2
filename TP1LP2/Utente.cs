@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 ///<version>0.1</version>
 ///<author>Andre</author>
 
-namespace TP1LP2
+namespace Objects
 {
     public class Utente : Pessoa
     {
@@ -18,8 +18,14 @@ namespace TP1LP2
         /// <summary>
         /// Initializing attributes
         /// </summary>
-        
-        protected float levelOfUrgency = 0;
+        public int patientNumber;
+        public string clinicalCase;
+        public int levelOfUrgency;
+        public int doctorCode;//Code of the doctor seeing to the patient
+        public int nurseCode;
+        public bool triageState;
+        public bool seenByDoctor;
+
         #endregion
 
 
@@ -36,37 +42,97 @@ namespace TP1LP2
             
         }
 
+
         /// <summary>
         /// Creates a new Utente, taking parameters
-        /// </summary>       
+        /// </summary>
         /// <param name="lou"></param>
-        /// <param name="n"></param>
-        /// <param name="a"></param>
-        /// <param name="ni"></param>
-        /// <param name="gen"></param>
-        public Utente(string n, int a, int ni, string gen, float lou)
+        /// <param name="pn"></param>
+        /// <param name="cc"></param>
+        /// <param name="dc"></param>
+        /// <param name="nc"></param>
+        /// <param name="ts"></param>
+        /// <param name="sbd"></param>
+        public Utente(int lou, int pn, string cc, int dc, int nc, bool ts, bool sbd)
         {
-            name = n;
-            age = a;
-            nif = ni;
-            gender = gen;
             levelOfUrgency = lou;
-        }
+            patientNumber = pn;
+            clinicalCase = cc;        
+            doctorCode = dc;//Code of the doctor seeing to the patient
+            nurseCode = nc;
+            triageState = ts;
+            seenByDoctor = sbd;
+    }
         #endregion
 
         #region Methods
 
         #region Properties
-               
-
+        
         /// <summary>
-        /// Gets Level of urgency for a Utente
+        /// Gets Level of urgency for an Utente
         /// </summary>
-        public float LevelOfUrgency//Ideia: fazer a media dos niveis de gravidade dos sintomas que o utente apresenta
+        public int LevelOfUrgency
         {
             get { return levelOfUrgency; }
             set { levelOfUrgency = value; }
         }
+
+        /// <summary>
+        /// Gets patient number for an Utente
+        /// </summary>
+        public int PatientNumber
+        {
+            get { return patientNumber; }
+            set { patientNumber = value; }
+        }
+
+        /// <summary>
+        /// Gets Clinical case for an Utente
+        /// </summary>
+        public string ClinicalCase
+        {
+            get { return clinicalCase; }
+            set { clinicalCase = value; }
+        }
+
+        /// <summary>
+        /// Gets doctor code for an Utente
+        /// </summary>
+        public int DoctorCode
+        {
+            get { return doctorCode; }
+            set { doctorCode = value; }
+        }
+
+        /// <summary>
+        /// Gets nurse code for an Utente
+        /// </summary>
+        public int NurseCode
+        {
+            get { return nurseCode; }
+            set { nurseCode = value; }
+        }
+
+        /// <summary>
+        /// Gets triage state for an Utente
+        /// </summary>
+        public bool TriageState
+        {
+            get { return triageState; }
+            set { triageState = value; }
+        }
+
+        /// <summary>
+        /// Gets triage state for an Utente
+        /// </summary>
+        public bool SeenByDoctor
+        {
+            get { return seenByDoctor; }
+            set { seenByDoctor = value; }
+        }
+
+
 
         #endregion
 

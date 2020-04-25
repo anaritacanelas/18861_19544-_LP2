@@ -4,7 +4,7 @@
 ///<version>0.1</version>
 ///<author>Andre</author>
 
-namespace TP1LP2
+namespace Objects
 {
     public class Urgencia
     {

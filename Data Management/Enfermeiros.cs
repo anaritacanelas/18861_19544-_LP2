@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Objects;
 
 ///<copyright file = "Enfermeiros.cs"	company = "IPCA">
 ///Copyright IPCA </copyright>
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 ///<version>0.1</version>
 ///<author>Andre</author>
 
-namespace TP1LP2
+namespace DataManagement
 {
     class Enfermeiros
     {
@@ -20,7 +21,7 @@ namespace TP1LP2
         /// Gets avaliable number of nurses
         /// </summary>
         /// <returns></returns>
-        int getAvaliableNurses()
+        public int getAvaliableNurses()
         {
             int avaliableNurses = 6;
             return avaliableNurses;
